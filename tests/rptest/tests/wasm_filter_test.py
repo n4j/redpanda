@@ -43,7 +43,6 @@ class WasmFilterTest(WasmTest):
                                            str(j), [],
                                            partition=i)
 
-    @ignore  # https://github.com/vectorizedio/redpanda/issues/2514
     @cluster(num_nodes=3)
     def verify_filter_test(self):
         # 1. Fill source topics with test data
